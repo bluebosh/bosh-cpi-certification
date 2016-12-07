@@ -5,6 +5,9 @@ set -e
 source /etc/profile.d/chruby.sh
 chruby 2.1.7
 
+: ${SL_VM_NAME_PREFIX:?}
+: ${SL_VM_DOMAIN:?}
+
 # inputs
 input_dir=$(realpath director-config/)
 stemcell_dir=$(realpath stemcell/)
@@ -30,6 +33,11 @@ function finish {
   echo "Final state of director deployment:"
   echo "=========================================="
   cat "${output_dir}/director-state.json"
+  echo "=========================================="
+
+  echo "Director IP:"
+  echo "=========================================="
+  cat /etc/hosts | grep "$SL_VM_NAME_PREFIX.$SL_VM_DOMAIN" | awk '{print $1}' | tee ${output_dir}/director-info
   echo "=========================================="
 
   cp -r $HOME/.bosh ${output_dir}

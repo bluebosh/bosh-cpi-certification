@@ -1,0 +1,28 @@
+---
+platform: linux
+image_resource:
+  type: docker-image
+  source: {repository: boshcpi/cpi-certification}
+
+inputs:
+  - name: bosh-cli
+  - name: pipelines
+  - name: environment
+
+outputs:
+  - name: deployment-manifest
+
+run:
+  path: pipelines/softlayer/tasks/prepare-deployment.sh
+
+params:
+  BOSH_USER:                 ""
+  BOSH_PASSWORD:                 ""
+  SL_VM_NAME_PREFIX:  ""
+  SL_VM_DOMAIN: ""
+  SL_DATACENTER: ""
+  SL_VLAN_PUBLIC: ""
+  SL_VLAN_PRIVATE: ""
+  RELEASE_NAME:                           ""
+  STEMCELL_NAME:                          ""
+  DEPLOYMENT_NAME:                        ""

@@ -22,3 +22,5 @@ params:
   BOSH_LOG_LEVEL:     info
   BOSH_CLIENT:        ""
   BOSH_CLIENT_SECRET: ""
+  SL_VM_NAME_PREFIX: ""
+  SL_VM_DOMAIN: ""
