@@ -54,21 +54,24 @@ resource_pools:
     stemcell:
       url: ${STEMCELL_URI}
     cloud_properties:
-      VmNamePrefix: $SL_VM_NAME_PREFIX
-      Domain: $SL_VM_DOMAIN
-      StartCpus: 4
-      MaxMemory: 8192
-      EphemeralDiskSize: 100
-      Datacenter:
-        Name: $SL_DATACENTER
-      HourlyBillingFlag: true
-      LocalDiskFlag: false
-      PrimaryNetworkComponent:
-        NetworkVlan:
-          Id: $SL_VLAN_PUBLIC
-      PrimaryBackendNetworkComponent:
-        NetworkVlan:
-          Id: $SL_VLAN_PRIVATE
+      vmNamePrefix: $SL_VM_NAME_PREFIX
+      domain: $SL_VM_DOMAIN
+      startCpus: 4
+      maxMemory: 8192
+      ephemeralDiskSize: 100
+      datacenter:
+        name: $SL_DATACENTER
+      hourlyBillingFlag: true
+      localDiskFlag: false
+      primaryNetworkComponent:
+        networkVlan:
+          id: $SL_VLAN_PUBLIC
+      primaryBackendNetworkComponent:
+        networkVlan:
+          id: $SL_VLAN_PRIVATE
+    env:
+      bosh:
+        keep_root_password: true
 
 disk_pools:
   - name: disks
@@ -80,6 +83,7 @@ networks:
     dns:
     - 8.8.8.8
     - 10.0.80.11
+    - 10.0.80.12
 
 jobs:
   - name: bosh
