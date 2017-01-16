@@ -11,8 +11,8 @@ source pipelines/shared/utils.sh
 : ${SL_VLAN_PRIVATE:?}
 : ${SL_USERNAME:?}
 : ${SL_API_KEY:?}
-: ${BOSH_USER:?}
-: ${BOSH_PASSWORD:?}
+: ${BOSH_CLIENT:?}
+: ${BOSH_CLIENT_SECRET:?}
 : ${USE_REDIS:=false}
 
 # inputs
@@ -34,8 +34,8 @@ cat > "${output_dir}/director.env" <<EOF
 #!/usr/bin/env bash
 
 export BOSH_ENVIRONMENT="${DIRECTOR_IP//./-}.sslip.io"
-export BOSH_USER=${BOSH_USER}
-export BOSH_PASSWORD=${BOSH_PASSWORD}
+export BOSH_CLIENT=${BOSH_CLIENT}
+export BOSH_CLIENT_SECRET=${BOSH_CLIENT_SECRET}
 EOF
 
 cat > "${output_dir}/director.yml" <<EOF
@@ -136,7 +136,7 @@ jobs:
           provider: local
           local:
             users:
-              - {name: ${BOSH_USER}, password: ${BOSH_PASSWORD}}
+              - {name: ${BOSH_CLIENT}, password: ${BOSH_CLIENT_SECRET}}
         enable_virtual_delete_vms: true
 
       hm:

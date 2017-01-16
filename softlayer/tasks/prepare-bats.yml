@@ -18,5 +18,5 @@ run:
 params:
   STEMCELL_NAME:          ""
   BAT_VCAP_PASSWORD:      ""
-  BOSH_DIRECTOR_USER:     ""
-  BOSH_PASSWORD:          ""
+  BOSH_CLIENT:     ""
+  BOSH_CLIENT_SECRET:     ""

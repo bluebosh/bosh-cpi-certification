@@ -2,8 +2,8 @@
 
 set -e
 
-: ${BOSH_PASSWORD:?}
-: ${BOSH_USER:?}
+: ${BOSH_CLIENT:?}
+: ${BOSH_CLIENT_SECRET:?}
 : ${SL_VM_NAME_PREFIX:?}
 : ${SL_VM_DOMAIN:?}
 : ${SL_DATACENTER:?}
