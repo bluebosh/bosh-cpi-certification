@@ -80,7 +80,6 @@ networks:
     dns:
     - 8.8.8.8
     - 10.0.80.11
-    - 10.0.80.12
 
 jobs:
   - name: bosh
