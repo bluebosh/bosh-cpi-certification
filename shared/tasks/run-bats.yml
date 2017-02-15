@@ -6,6 +6,7 @@ image_resource:
 
 inputs:
   - name: pipelines
+  - name: bosh-cli
   - name: bats
   - name: bats-config
   - name: stemcell

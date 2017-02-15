@@ -9,6 +9,7 @@ chruby 2.1.7
 # preparation
 export BAT_STEMCELL=$(realpath stemcell/*.tgz)
 export BAT_DEPLOYMENT_SPEC=$(realpath bats-config/bats-config.yml)
+export BAT_BOSH_CLI=$(realpath bosh-cli/bosh-cli-*)
 bats_dir=$(realpath bats)
 
 # disable host key checking for deployed VMs
