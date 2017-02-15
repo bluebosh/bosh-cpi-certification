@@ -13,6 +13,8 @@ export BAT_BOSH_CLI=$(realpath bosh-cli/bosh-cli-*)
 chmod +x $BAT_BOSH_CLI
 bats_dir=$(realpath bats)
 
+export BAT_DIRECTOR_SUFFIX=".sslip.io"
+
 # disable host key checking for deployed VMs
 mkdir -p $HOME/.ssh
 cat > $HOME/.ssh/config << EOF
