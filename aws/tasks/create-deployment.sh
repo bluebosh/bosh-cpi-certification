@@ -22,7 +22,7 @@ export AWS_DEFAULT_REGION=${AWS_REGION_NAME}
 manifest_dir=$(realpath deployment-manifest)
 deployment_release=$(realpath pipelines/shared/assets/certification-release)
 stemcell_dir=$(realpath stemcell)
-bosh_cli=$(realpath bosh-cli/bosh-cli-*)
+bosh_cli=$(realpath bosh-cli/*bosh-cli-*)
 chmod +x $bosh_cli
 
 # configuration

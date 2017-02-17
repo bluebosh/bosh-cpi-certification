@@ -8,7 +8,7 @@ chruby 2.1.7
 
 # inputs
 input_dir=$(realpath director-state/)
-bosh_cli=$(realpath bosh-cli/bosh-cli-*)
+bosh_cli=$(realpath bosh-cli/*bosh-cli-*)
 chmod +x $bosh_cli
 
 if [ ! -e "${input_dir}/director-state.json" ]; then

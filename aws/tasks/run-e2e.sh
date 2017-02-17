@@ -21,7 +21,7 @@ export AWS_DEFAULT_REGION=${AWS_REGION_NAME}
 stemcell_path="$(realpath stemcell/*.tgz)"
 heavy_stemcell_path="$(realpath heavy-stemcell/*.tgz)"
 e2e_release="$(realpath pipelines/aws/assets/e2e-test-release)"
-bosh_cli=$(realpath bosh-cli/bosh-cli-*)
+bosh_cli=$(realpath bosh-cli/*bosh-cli-*)
 chmod +x $bosh_cli
 
 : ${SUBNET_ID:=$(            stack_info "PublicSubnetID")}

@@ -20,7 +20,7 @@ export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_KEY}
 export AWS_DEFAULT_REGION=${AWS_REGION_NAME}
 
 # inputs
-bosh_cli=$(realpath bosh-cli/bosh-cli-*)
+bosh_cli=$(realpath bosh-cli/*bosh-cli-*)
 chmod +x $bosh_cli
 
 # configuration
