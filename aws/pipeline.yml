@@ -76,6 +76,7 @@ jobs:
     serial: true
     plan:
       - aggregate:
+        - {get: every-2h,        trigger: true}
         - {get: bosh-release,    trigger: true}
         - {get: cpi-release,     trigger: true}
         - {get: after-midnight,  trigger: true}
@@ -118,6 +119,7 @@ jobs:
     serial: true
     plan:
       - aggregate:
+        - {get: every-2h,       trigger: true}
         - {get: bosh-release,   trigger: true}
         - {get: cpi-release,    trigger: true}
         - {get: after-midnight, trigger: true}
@@ -153,6 +155,7 @@ jobs:
     serial: true
     plan:
       - aggregate:
+        - {get: every-2h,       trigger: true}
         - {get: bosh-release,   trigger: true}
         - {get: cpi-release,    trigger: true}
         - {get: after-midnight, trigger: true}
@@ -187,6 +190,7 @@ jobs:
     serial: true
     plan:
       - aggregate:
+        - {get: every-2h,         trigger: true}
         - {get: bosh-release,     trigger: true}
         - {get: cpi-release,      trigger: true}
         - {get: after-midnight,   trigger: true}
@@ -345,6 +349,11 @@ resources:
     source:
       start: 12:00 AM -0700
       stop: 2:00 AM -0700
+
+  - name: every-2h
+    type: time
+    source:
+      interval: 2h
 
   - name: pipelines
     type: git

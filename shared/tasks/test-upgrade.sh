@@ -13,7 +13,7 @@ new_director_config=$(realpath new-director-config/)
 stemcell_dir=$(realpath stemcell/)
 bosh_dir=$(realpath bosh-release/)
 cpi_dir=$(realpath cpi-release/)
-bosh_cli=$(realpath bosh-cli/bosh-cli-*)
+bosh_cli=$(realpath bosh-cli/*bosh-cli-*)
 chmod +x $bosh_cli
 
 # outputs

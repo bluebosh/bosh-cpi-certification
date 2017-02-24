@@ -12,7 +12,7 @@ set -e
 source pipelines/shared/utils.sh
 
 # inputs
-bosh_cli=$(realpath bosh-cli/bosh-cli-*)
+bosh_cli=$(realpath bosh-cli/*bosh-cli-*)
 chmod +x $bosh_cli
 
 # outputs

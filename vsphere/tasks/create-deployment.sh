@@ -16,7 +16,7 @@ manifest_dir=$(realpath deployment-manifest)
 metadata=$(cat environment/metadata)
 network1=$(env_attr "${metadata}" "network1")
 deployment_release=$(realpath pipelines/shared/assets/certification-release)
-bosh_cli=$(realpath bosh-cli/bosh-cli-*)
+bosh_cli=$(realpath bosh-cli/*bosh-cli-*)
 chmod +x $bosh_cli
 
 echo "Using environment: \'${env_name}\'"
