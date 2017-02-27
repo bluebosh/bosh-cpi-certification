@@ -71,6 +71,7 @@ resource_pools:
           id: $SL_VLAN_PRIVATE
     env:
       bosh:
+        password: "$6$4gDD3aV0rdqlrKC$2axHCxGKIObs6tAmMTqYCspcdvQXh3JJcvWOY2WGb4SrdXtnCyNaWlrf3WEqvYR2MYizEGp3kMmbpwBC6jsHt0"
         keep_root_password: true
 
 disk_pools:
