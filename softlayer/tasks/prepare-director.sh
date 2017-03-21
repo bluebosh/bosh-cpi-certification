@@ -54,6 +54,7 @@ resource_pools:
     stemcell:
       url: ${STEMCELL_URI}
     cloud_properties:
+      deployedByBoshcli: true
       vmNamePrefix: $SL_VM_NAME_PREFIX
       domain: $SL_VM_DOMAIN
       startCpus: 4
