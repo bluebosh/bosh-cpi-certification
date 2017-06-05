@@ -93,7 +93,7 @@ jobs:
 
     templates:
       - {name: nats, release: bosh}
-      - {name: postgres, release: bosh}
+      - {name: postgres-9.4, release: bosh}
       - {name: blobstore, release: bosh}
       - {name: director, release: bosh}
       - {name: health_monitor, release: bosh}
@@ -113,7 +113,7 @@ jobs:
         user: nats
         password: nats-password
 
-      postgres: &db
+      postgres-9.4: &db
         host: 127.0.0.1
         user: postgres
         password: postgres-password
