@@ -113,7 +113,7 @@ jobs:
         user: nats
         password: nats-password
 
-      postgres-9.4: &db
+      postgres: &db
         host: 127.0.0.1
         user: postgres
         password: postgres-password
