@@ -150,7 +150,7 @@ jobs:
         director_account: {user: ${BOSH_DIRECTOR_USERNAME}, password: ${BOSH_DIRECTOR_PASSWORD}}
         resurrector_enabled: true
 
-      agent: {mbus: "nats://nats:nats-password@127.0.0.1:4222", vcappassword: $6$3n/Y5RP0$Jr1nLxatojY9Wlqduzwh66w8KmYxjoj9vzI62n3Mmstd5mNVnm0SS1N0YizKOTlJCY5R/DFmeWgbkrqHIMGd51}
+      agent: {mbus: "nats://nats:nats-password@127.0.0.1:4222", vcappassword: "\$6\$3n/Y5RP0\$Jr1nLxatojY9Wlqduzwh66w8KmYxjoj9vzI62n3Mmstd5mNVnm0SS1N0YizKOTlJCY5R/DFmeWgbkrqHIMGd51"}
 
       dns:
         address: 127.0.0.1
@@ -167,7 +167,7 @@ cloud_provider:
 
   properties:
     softlayer: *softlayer
-    agent: {mbus: "https://mbus:mbus-password@0.0.0.0:6868", vcappassword: $6$3n/Y5RP0$Jr1nLxatojY9Wlqduzwh66w8KmYxjoj9vzI62n3Mmstd5mNVnm0SS1N0YizKOTlJCY5R/DFmeWgbkrqHIMGd51}
+    agent: {mbus: "https://mbus:mbus-password@0.0.0.0:6868", vcappassword: "\$6\$3n/Y5RP0\$Jr1nLxatojY9Wlqduzwh66w8KmYxjoj9vzI62n3Mmstd5mNVnm0SS1N0YizKOTlJCY5R/DFmeWgbkrqHIMGd51"}
     blobstore: {provider: local, path: /var/vcap/micro_bosh/data/cache}
     ntp: [0.pool.ntp.org, 1.pool.ntp.org]
 EOF
