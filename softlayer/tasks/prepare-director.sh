@@ -166,7 +166,7 @@ cloud_provider:
   mbus: "https://mbus:mbus-password@$SL_VM_NAME_PREFIX.$SL_VM_DOMAIN:6868"
 
   properties:
-    softlayer: *softlayer
+    softlayer_legacy: *softlayer
     agent: {mbus: "https://mbus:mbus-password@0.0.0.0:6868"}
     blobstore: {provider: local, path: /var/vcap/micro_bosh/data/cache}
     ntp: [0.pool.ntp.org, 1.pool.ntp.org]
