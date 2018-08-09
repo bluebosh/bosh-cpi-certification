@@ -156,7 +156,7 @@ jobs:
         address: 127.0.0.1
         db: *db
 
-      softlayer: &softlayer
+      softlayer_legacy: &softlayer
         username: $SL_USERNAME
         apiKey: $SL_API_KEY
 
