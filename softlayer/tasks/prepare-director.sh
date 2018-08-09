@@ -45,7 +45,7 @@ name: certification-director
 releases:
   - name: bosh
     url: ${BOSH_RELEASE_URI}
-  - name: bosh-softlayer-cpi
+  - name: bosh-softlayer-legacy-cpi
     url: ${CPI_RELEASE_URI}
 
 resource_pools:
@@ -98,7 +98,7 @@ jobs:
       - {name: director, release: bosh}
       - {name: health_monitor, release: bosh}
       - {name: powerdns, release: bosh}
-      - {name: softlayer_legacy_cpi, release: bosh-softlayer-cpi}
+      - {name: softlayer_legacy_cpi, release: bosh-softlayer-legacy-cpi}
       ${redis_job}
 
     resource_pool: vms
@@ -161,7 +161,7 @@ jobs:
         apiKey: $SL_API_KEY
 
 cloud_provider:
-  template: {name: softlayer_legacy_cpi, release: bosh-softlayer-cpi}
+  template: {name: softlayer_legacy_cpi, release: bosh-softlayer-legacy-cpi}
 
   mbus: "https://mbus:mbus-password@$SL_VM_NAME_PREFIX.$SL_VM_DOMAIN:6868"
 
