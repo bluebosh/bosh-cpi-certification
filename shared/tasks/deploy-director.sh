@@ -43,7 +43,7 @@ function finish {
   cp -r $HOME/.bosh ${output_dir}
   rm -rf $logfile
 }
-# trap finish EXIT
+trap finish EXIT
 
 pushd ${output_dir} > /dev/null
   echo "deploying BOSH..."
